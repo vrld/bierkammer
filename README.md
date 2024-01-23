@@ -109,3 +109,20 @@ the following files:
     };
   }
   ```
+
+### Flash
+
+You need platformio to build and flash this project.
+
+With a fresh D1 Mini, comment out the lines
+```
+upload_protocol = espota
+extra_scripts = pre:secrets.py
+```
+and add `upload_port = {whatever}` in `platformio.ini`.
+See the [platformio docs](https://docs.platformio.org/en/latest/projectconf/sections/env/options/upload/index.html)
+for reference.
+
+`pio run -t upload` will build and flash the project.
+
+Undo the changes to enable over the air updates.
