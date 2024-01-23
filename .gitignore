@@ -1,0 +1,3 @@
+include/netconfig.hpp
+include/mqttconfig.hpp
+include/socketconfig.hpp
